@@ -8,5 +8,5 @@ from database.models.mixins import MysqlPrimaryKeyMixin, MysqlTimestampsMixin
 class BookCategory(Base, MysqlPrimaryKeyMixin, MysqlTimestampsMixin):
     __tablename__ = "books_categories"
 
-    subcategory_id = Column(BIGINT(unsigned=True), index=True, nullable=False, unique=True)
+    category_id = Column(BIGINT(unsigned=True), index=True, nullable=False, unique=True)
     book_id = Column(BIGINT(unsigned=True), index=True, nullable=False, unique=True)
